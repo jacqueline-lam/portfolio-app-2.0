@@ -2,7 +2,7 @@ const NavBar = () => {
   return (
       <nav className="navbar">
         <div className="container">
-          NAV BAR
+          [NAV BAR]
         </div>
       </nav>
     )
