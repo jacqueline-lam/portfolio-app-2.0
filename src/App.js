@@ -13,8 +13,12 @@ function App() {
   return (
     <div className="App" id="page-top">
       <NavBar />
-      <Home />
-      <About />
+      <Switch>
+          {/* only first child <Route> that matches the location gets rendered */}
+          {/* When URL matches specified path, render component */}
+          <Route path='/about' component={About} />
+          <Route exact path='/' component={Home} />
+        </Switch>
       Hello world
     </div>
   );
