@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import reportWebVitals from './reportWebVitals';
 // React-router to link to specific URLs then show/hide various components
+// Router = base for app's routing - declare how react router will be used
+// provider - React Context API - provides data to child components
 import { HashRouter as Router } from 'react-router-dom';
 import App from './App';
+// import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <Router>
