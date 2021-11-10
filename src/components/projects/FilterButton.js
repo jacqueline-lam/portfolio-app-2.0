@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function FilterButton({ key, stack, selectedStacks, editFilter }) {
+function FilterButton({ key, stack, selectedStacks, toggleFilter }) {
   const [selected, setSelected] = useState(false);
   const myStackId = stack.id;
 
@@ -17,7 +17,7 @@ function FilterButton({ key, stack, selectedStacks, editFilter }) {
     } else {
       setSelected(false);
     };
-    editFilter(stackClicked, selected);
+    toggleFilter(stackClicked, selected);
   };
 
   return(
@@ -29,7 +29,6 @@ function FilterButton({ key, stack, selectedStacks, editFilter }) {
       value={stack}
       onClick={handleOnClick}>
       {stack.name}
-    >
     </button>
   )
 }

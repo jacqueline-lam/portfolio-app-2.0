@@ -8,24 +8,32 @@ function ProjectsContainer() {
   const [projects, setProjects] = useState([]);
   const [loadingProjects, setLoadingProjects] = useState(true);
 
-  useEffect(() => {
-    const fetchStacks = () => {
-      fetch('https://jlam-portfolio-backend.herokuapp.com/api/v1/stacks')
-      .then(r => r.json())
-      .then(rJSON => setStacks(rJSON.stacks))
-    };
+  const fetchStacks = () => {
+    fetch('https://jlam-portfolio-backend.herokuapp.com/api/v1/stacks')
+    .then(r => r.json())
+    .then(rJSON => {
+      setLoadingProjects(false);
+      setStacks(rJSON);
+    })
+  };
 
-    const fetchProjects = () => {
-      fetch("https://jlam-portfolio-backend.herokuapp.com/api/v1/projects")
-          .then(r => r.json())
-          .then(rJSON => {
-            setProjects(rJSON.projects);
-            setLoadingProjects(false);
-          })
-    };
+  const fetchProjects = () => {
+    fetch("https://jlam-portfolio-backend.herokuapp.com/api/v1/projects")
+        .then(r => r.json())
+        .then(rJSON => {
+          setProjects(rJSON);
+          setLoadingProjects(false);
+        })
+  };
+
+  useEffect(() => {
     fetchStacks();
     fetchProjects();
   }, [])
+
+  function handleFiltersChange(selectedFilters) {
+
+  }
 
   return (
     <div id='projects-container' className='component'>
@@ -37,7 +45,10 @@ function ProjectsContainer() {
             :
             <div id='portfolio'>
               <h3>My Latest Projects</h3>
-              <ProjectFilters stacks={stacks} selectedStacks={selectedStacks}/>
+              <ProjectFilters
+                stacks={stacks}
+                // onFilterChange={handleFiltersChange}
+              />
               <ProjectList />
             </div>
         }
