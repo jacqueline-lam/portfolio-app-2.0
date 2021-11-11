@@ -13,7 +13,7 @@ function BlogPost ({ blogPost }) {
             <img src={blogPost.cover_image} />
             {renderTags}
             <h4 className="card-title">{blogPost.title}</h4>
-            <p className="card-text">{blogPost.description}}</p>
+            <p className="card-text">{blogPost.description}</p>
             <button
               className="btn btn-danger btn-lg"
               onClick={() => window.open(blogPost.url, "_blank")}>
