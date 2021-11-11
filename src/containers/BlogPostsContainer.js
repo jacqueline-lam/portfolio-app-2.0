@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import Blog from '../components/blog/Blog'
 import Loading from '../images/loading.gif'
+import icon from '../images/blog-icon.png';
+// import Blog from '../components/blog/Blog'
+import BlogPost from '../components/BlogPost';
 
 const BLOG_URL = 'https://dev.to/api/articles?username=jacquelinelam'
 
@@ -18,13 +20,20 @@ function BlogPostsContainer() {
     .catch(() => alert("Can’t access response from dev.to API. Blocked by browser?"))
   },[])
 
+  const blogPostList = blogPosts.map((blogPost) => (
+    <BlogPost key={blogPost.id} blogPost={blogPost} />
+  ));
+
   return (
     <div id='blog-container' className='component'>
-      <h1>BLOG</h1>
+        <div className='title-with-icon'>
+          <img src={icon} alt='blog icon' />
+          <h1>BLOG</h1>
+        </div>
       <>
       {
         isLoaded ?
-          <Blog blogPosts={blogPosts} />
+          blogPostList
           :
           <img src={Loading} alt='loading' />
       }

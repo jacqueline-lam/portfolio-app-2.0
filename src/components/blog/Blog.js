@@ -1,5 +1,4 @@
 import BlogPost from './BlogPost';
-import icon from '../../images/blog-icon.png';
 
 // Presentational component to receive props from blogPostsContainer
 // update based on prop changes or if parent component re-renders
@@ -11,10 +10,6 @@ function Blog({ blogPosts }) {
 
   return (
     <div className='component'>
-      <div className='title-with-icon'>
-        <img src={icon} alt='blog icon' />
-        <h1>BLOG</h1>
-      </div>
       {blogPostList}
     </div>
   );
