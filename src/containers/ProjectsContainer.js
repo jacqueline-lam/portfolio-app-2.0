@@ -26,6 +26,7 @@ function ProjectsContainer() {
         })
   };
 
+  // empty dependencies array in second arg, so only run fetch ONCE
   useEffect(() => {
     fetchStacks();
     fetchProjects();
@@ -49,7 +50,7 @@ function ProjectsContainer() {
                 stacks={stacks}
                 // onFilterChange={handleFiltersChange}
               />
-              <ProjectList />
+              <ProjectList projects={projects}/>
             </div>
         }
       </>

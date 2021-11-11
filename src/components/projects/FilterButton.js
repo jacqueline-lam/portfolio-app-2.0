@@ -6,7 +6,7 @@ function FilterButton({ stack, selectedStacks, toggleFilter }) {
 
   useEffect(()=>{
     setSelected(selectedStacks.includes(myStackId.toString()))
-  })
+  },)
 
   function handleOnClick(event) {
     let pressed = selected;
