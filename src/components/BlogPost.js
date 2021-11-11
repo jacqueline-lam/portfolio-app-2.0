@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 function BlogPost ({ blogPost }) {
   const renderTags = blogPost.tag_list.map((tag, idx) => (
-    <span key={idx} className='badge' pill variant='dark'>{tag}</span>
+    <Badge key={idx} pill variant="dark">{tag}</Badge>
   ));
 
   return (
