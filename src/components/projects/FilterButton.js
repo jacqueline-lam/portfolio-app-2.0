@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function FilterButton({ key, stack, selectedStacks, toggleFilter }) {
+function FilterButton({ stack, selectedStacks, toggleFilter }) {
   const [selected, setSelected] = useState(false);
   const myStackId = stack.id;
 
