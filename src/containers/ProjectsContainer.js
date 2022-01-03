@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 // import custom `useRouteMatch` from React Router
-import { Route, useRouteMatch } from 'react-router-dom';
+import {
+  Switch,
+  Route,
+  useRouteMatch
+} from 'react-router-dom';
 import ProjectFilters from '../components/projects/ProjectFilters';
 import ProjectList from '../components/projects/ProjectList';
 import ProjectDetails from '../components/projects/ProjectDetails';
@@ -42,27 +46,32 @@ function ProjectsContainer() {
 
   return (
     <div id='projects-container' className='component'>
-      <h1>PORTFOLIO</h1>
-      {/*  we can use current URL from the `match` object as part of the path,
-        this will generate a url like "/projects/:projectId" */}
-      <Route path={`${match.url}/:projectId`}>
-        <ProjectDetails projects={projects} />
-      </Route>
-      <>
-        {
-          loadingProjects ?
-            <h2>Loading...</h2>
-            :
-            <div id='portfolio'>
-              <h3>My Latest Projects</h3>
-              <ProjectFilters
-                stacks={stacks}
-              // onFilterChange={handleFiltersChange}
-              />
-              <ProjectList projects={projects} />
-            </div>
-        }
-      </>
+      <Switch>
+        {/*  we can use current URL from the `match` object as part of the path,
+          this will generate a url like "/projects/:projectId" */}
+        <Route path={`${match.url}/:projectId`}>
+          <ProjectDetails projects={projects} />
+        </Route>
+        <Route path='/projects' render={() => (
+          <>
+            <h1>PORTFOLIO</h1>
+            {
+              loadingProjects ?
+                <h2>Loading...</h2>
+                :
+                <div id='portfolio'>
+                  <h3>My Latest Projects</h3>
+                  <ProjectFilters
+                    stacks={stacks}
+                  // onFilterChange={handleFiltersChange}
+                  />
+                  <ProjectList projects={projects} />
+                </div>
+            }
+          </>
+        )} />
+      </Switch>
+
     </div>
   )
 }
