@@ -14,7 +14,11 @@ function ProjectCard({ project }) {
       <Link key={project.id} to={`/projects/${project.id}`}>
         <h4>{project.name}</h4>
       </Link>
-      <img className='project-thumbnail img-fluid' alt='project thumbnail' src={img.default} />
+      <img
+        className='project-thumbnail img-fluid'
+        alt='project thumbnail'
+        src={img.default}
+      />
       <i>{projectStacks}</i>
       <hr />
     </div >

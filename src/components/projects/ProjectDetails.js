@@ -38,7 +38,7 @@ function ProjectDetails({ projects }) {
           <img
             className='project-thumbnail img-fluid'
             alt='project thumbnail'
-            src={img}
+            src={img.default}
           />
           <h5>Stacks</h5>
           {projectStacks}
