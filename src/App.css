@@ -27,6 +27,71 @@ div.component {
   width: 90%;
   /* padding: 10px; */
 }
+
+.text{
+  display: inline-block;
+  text-align: left;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+#about {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 110vh;
+  padding: 10rem 0;
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("images/about.jpg"); */
+  /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 30%, rgba(233, 233, 233, 0.5) 75%, #9c9c9c 100%), url("images/about.jpg"); */
+  background: linear-gradient(to bottom, rgba(44, 61, 72, 0.65) 30%, rgba(23, 23, 23, 0.52) 75%, #0b0d11a3 80%), url('images/about.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  margin: -10rem 0;
+}
+
+#about-text {
+  color: #EBEBF3;
+  text-align: right;
+  margin-top: 1%;
+  padding-top: 0;
+  width: 80%;
+  line-height: 200%;
+}
+
+#about-text h1{
+  background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #8fbdba 65%);
+  display: inline;
+  font-size: 4rem;
+}
+
+#about-text h2{
+  display: block;
+  font-size: 2em;
+}
+
+#about-text h6{
+  display: block;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+#about-text div.text-section i{
+  font-size: 1.0em;
+  line-height:0.2em;
+}
+
+div.text-section {
+  padding-bottom: 2rem;
+}
+
+#skills i{
+  background-color: black;
+  font-size: 1.3em;
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/

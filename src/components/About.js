@@ -17,7 +17,7 @@ function About() {
           <i>&raquo; Misc.: GitHub Pages, Heroku, RESTful API, Object Oriented Programming, Model-View-Controller (MVC)</i><br />
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
