@@ -2,7 +2,7 @@ import Moment from 'react-moment';
 import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 
-function BlogPost ({ blogPost }) {
+function BlogPost({ blogPost }) {
   const renderTags = blogPost.tag_list.map((tag, idx) => (
     <Badge key={idx} pill variant="dark">{tag}</Badge>
   ));

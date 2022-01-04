@@ -10,15 +10,15 @@ function BlogPostsContainer() {
   const [blogPosts, setBlogPosts] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(()=> {
+  useEffect(() => {
     fetch(BLOG_URL)
-    .then(r => r.json())
-    .then(rJSON => {
-      setBlogPosts(rJSON);
-      setIsLoaded(true);
-    })
-    .catch(() => alert("Can’t access response from dev.to API. Blocked by browser?"))
-  },[])
+      .then(r => r.json())
+      .then(rJSON => {
+        setBlogPosts(rJSON);
+        setIsLoaded(true);
+      })
+      .catch(() => alert("Can’t access response from dev.to API. Blocked by browser?"))
+  }, [])
 
   const blogPostList = blogPosts.map((blogPost) => (
     <BlogPost key={blogPost.id} blogPost={blogPost} />
@@ -26,17 +26,17 @@ function BlogPostsContainer() {
 
   return (
     <div id='blog-container' className='component'>
-        <div className='title-with-icon'>
-          <img src={icon} alt='blog icon' />
-          <h1>BLOG</h1>
-        </div>
+      <div className='title-with-icon'>
+        <img src={icon} alt='blog icon' />
+        <h1>BLOG</h1>
+      </div>
       <>
-      {
-        isLoaded ?
-          blogPostList
-          :
-          <img src={Loading} alt='loading' />
-      }
+        {
+          isLoaded ?
+            blogPostList
+            :
+            <img src={Loading} alt='loading' />
+        }
       </>
     </div>
   )
