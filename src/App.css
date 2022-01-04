@@ -31,8 +31,7 @@ div.component {
 .text{
   display: inline-block;
   text-align: left;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin: 0 5%;
 }
 /*--------------------------------------------------------------
 # About
