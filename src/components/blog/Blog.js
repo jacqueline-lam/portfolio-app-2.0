@@ -1,4 +1,4 @@
-import BlogPost from './BlogPost';
+import BlogPost from '../BlogPost';
 
 // Presentational component to receive props from blogPostsContainer
 // update based on prop changes or if parent component re-renders
