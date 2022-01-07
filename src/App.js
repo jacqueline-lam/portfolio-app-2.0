@@ -1,11 +1,11 @@
-// import React from 'react';
 import './App.css';
 // Route defines possible routes
 import {
   Route,
   Switch
 } from 'react-router-dom';
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
+import TestNavbar from './components/TestNavbar';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact'
@@ -15,7 +15,7 @@ import BlogPostsContainer from './containers/BlogPostsContainer'
 function App() {
   return (
     <div className="App" id="page-top">
-      <NavBar />
+      <TestNavbar />
       <Contact />
       <Switch>
         {/* only first child <Route> that matches the location gets rendered */}
