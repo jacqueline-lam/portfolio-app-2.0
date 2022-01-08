@@ -54,20 +54,22 @@ function ProjectsContainer() {
         </Route>
         <Route path='/projects' render={() => (
           <>
-            <h1>PORTFOLIO</h1>
-            {
-              loadingProjects ?
-                <h2>Loading...</h2>
-                :
-                <div id='portfolio'>
-                  <h3>My Latest Projects</h3>
-                  <ProjectFilters
-                    stacks={stacks}
-                  // onFilterChange={handleFiltersChange}
-                  />
-                  <ProjectList projects={projects} />
-                </div>
-            }
+            <div id='portfolio'>
+              <h1>PORTFOLIO</h1>
+              {
+                loadingProjects ?
+                  <h2>Loading...</h2>
+                  :
+                  <>
+                    <h3>My Latest Projects</h3>
+                    <ProjectFilters
+                      stacks={stacks}
+                    // onFilterChange={handleFiltersChange}
+                    />
+                    <ProjectList projects={projects} />
+                  </>
+              }
+            </div>
           </>
         )} />
       </Switch>

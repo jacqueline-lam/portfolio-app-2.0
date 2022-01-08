@@ -21,7 +21,7 @@ const NavBarB = () => {
               to="/"
               exact
               activeStyle={{
-                color: '#bda38f'
+                color: '#7ba0cf'
               }}
             >Home</NavLink>
           </li>
@@ -32,28 +32,28 @@ const NavBarB = () => {
               to="/about"
               exact
               activeStyle={{
-                color: '#bda38f'
+                color: '#7ba0cf'
               }}
             >About</NavLink>
           </li>
           <li>
             {/* <a href="#three" className="link link-theme link-arrow">ABOUT US</a> */}
             <NavLink
-              className='nav-link link-theme link-arrow'
+              className='link link-theme link-arrow'
               to="/projects"
               exact
               activeStyle={{
-                color: '#bda38f'
+                color: '#7ba0cf'
               }}
             >Portfolio</NavLink>
           </li>
           <li>
             <NavLink
-              className='nav-link link-theme link-arrow'
+              className='link link-theme link-arrow'
               to="/blog"
               exact
               activeStyle={{
-                color: '#bda38f'
+                color: '#7ba0cf'
               }}
             >Blog</NavLink>
           </li>
