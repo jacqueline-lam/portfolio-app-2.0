@@ -5,7 +5,7 @@ import {
   Switch
 } from 'react-router-dom';
 // import NavBar from './components/NavBar';
-import TestNavbar from './components/TestNavbar';
+import NavBarB from './components/NavBarB';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact'
@@ -14,8 +14,8 @@ import BlogPostsContainer from './containers/BlogPostsContainer'
 
 function App() {
   return (
-    <div className="App" id="page-top">
-      <TestNavbar />
+    <div className="App" id="app">
+      <NavBarB />
       <Contact />
       <Switch>
         {/* only first child <Route> that matches the location gets rendered */}
