@@ -10,7 +10,7 @@ function About() {
           <i>The rock climber in me gives me the flexibility and adaptability to be a multi-faceted problem solver under intense pressure, and imbues a passion for consistent self-improvement.</i>
         </div>
         <div className='text-section' id='skills'>
-          <h4> // Technical Skills</h4>
+          <h4> # Technical Skills</h4>
           <i>&raquo; Programming Languages: Javascript, Ruby, HTML & CSS</i><br />
           <i>&raquo; Frameworks + Libraries: Rails, React, Redux, Sinatra, Bootstrap, Material UI</i><br />
           <i>&raquo; Databases: PostgreSQL, SQL</i><br />

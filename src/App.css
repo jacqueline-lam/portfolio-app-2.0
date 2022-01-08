@@ -15,8 +15,8 @@
 body {
   /* margin-left: 2%;
   margin-right  : 2%; */
-  margin-top: 3%;
-  margin-bottom: 4%;
+  /* margin-top: 3%; */
+  /* margin-bottom: 4%; */
   background-color: #EBEBF3;
 }
 
@@ -27,7 +27,7 @@ div.component {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  padding-top: 10%;
+  padding-top: 8.5rem;
 }
 
 .text{
@@ -72,19 +72,18 @@ form {
   nav#mainNav {
     background-color: transparent;
   }
-  div#nav{
-    padding-bottom: 10rem;
-  }
 
   li .nav-link.js-scroll {
      font-size: smaller;
      /* text-align: right; */
   }
   div.component {
-    padding-top: 10%;
+    padding-top: 15rem;
   }
+
   div#about{
     margin-top: 0rem;
+    padding-top: 15rem;
   }
 
   div.sidenav img{
@@ -104,11 +103,18 @@ form {
   }
 }
 
-/* Nav Bar B */
+/*--------------------------------------------------------------
+# Nav Bar B
+--------------------------------------------------------------*/
+
 
 .header a.link {
   color: #777;
   text-decoration: none;
+}
+.header {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /*
@@ -318,7 +324,8 @@ a.link-theme:before {
 
 .header li a {
   display: block;
-  padding: 20px 20px 4px 20px;
+  /* padding: 20px 20px 4px 20px; */
+  padding: 0.5rem 1rem 0.3rem 1rem;
   text-decoration: none;
 }
 
@@ -477,177 +484,18 @@ a.link-theme:before {
 }
 
 
-/*--------------------------------------------------------------
-# Nav Bar
---------------------------------------------------------------*/
-/*
-nav#mainNav {
-  background-color: white;
-  text-align: left;
-}
-
-.navbar-b {
-  transition: all .5s ease-in-out;
-  background-color: transparent;
-  /* padding-top: 1.563rem;
-  padding-bottom: 1.563rem; */
-/* } */ */
-/*
-.navbar-b.navbar-reduce {
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
-}
-
-.navbar-b.navbar-trans .nav-item, .navbar-b.navbar-reduce .nav-item {
-  position: relative;
-  padding-right: 10px;
-  padding-left: 0;
-}
-
-@media (min-width: 768px) {
-  .navbar-b.navbar-trans .nav-item, .navbar-b.navbar-reduce .nav-item {
-    padding-left: 10px;
-  }
-}
-
-.navbar-b.navbar-trans .nav-link, .navbar-b.navbar-reduce .nav-link {
-  color: rgb(123, 160, 207);
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.navbar-b.navbar-trans .nav-link:before, .navbar-b.navbar-reduce .nav-link:before {
-  content: '';
-  position: absolute;
-  margin-left: 0px;
-  width: 0%;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  transition: all 500ms ease;
-}
-
-@media (min-width: 768px) {
-  .navbar-b.navbar-trans .nav-link:before, .navbar-b.navbar-reduce .nav-link:before {
-    margin-left: 18px;
-  }
-}
-
-.navbar-b.navbar-trans .nav-link:hover, .navbar-b.navbar-reduce .nav-link:hover {
-  color: #1B1B1B;
-}
-
-.navbar-b.navbar-trans .nav-link:hover:before, .navbar-b.navbar-reduce .nav-link:hover:before {
-  width: 35px;
-}
-
-.navbar-b.navbar-trans .show > .nav-link:before,
-.navbar-b.navbar-trans .active > .nav-link:before,
-.navbar-b.navbar-trans .nav-link.show:before,
-.navbar-b.navbar-trans .nav-link.active:before, .navbar-b.navbar-reduce .show > .nav-link:before,
-.navbar-b.navbar-reduce .active > .nav-link:before,
-.navbar-b.navbar-reduce .nav-link.show:before,
-.navbar-b.navbar-reduce .nav-link.active:before {
-  width: 35px;
-}
-
-.navbar-b.navbar-trans .nav-link:before {
-  background-color: rgb(123, 160, 207);
-}
-
-.navbar-b.navbar-trans .nav-link:hover {
-  color: rgb(123, 160, 207);
-}
-
-.navbar-b.navbar-trans .show > .nav-link,
-.navbar-b.navbar-trans .active > .nav-link,
-.navbar-b.navbar-trans .nav-link.show,
-.navbar-b.navbar-trans .nav-link.active {
-  color: rgb(123, 160, 207);
-}
-
-.navbar-b.navbar-reduce {
-  transition: all .5s ease-in-out;
-  background-color: black;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.navbar-b.navbar-reduce .nav-link {
-  color: #3a3f44;
-}
-
-.navbar-b.navbar-reduce .nav-link:before {
-  background-color: #0078ff;
-}
-
-.navbar-b.navbar-reduce .nav-link:hover {
-  color: #0078ff;
-}
-
-.navbar-b.navbar-reduce .show > .nav-link,
-.navbar-b.navbar-reduce .active > .nav-link,
-.navbar-b.navbar-reduce .nav-link.show,
-.navbar-b.navbar-reduce .nav-link.active {
-  color: #0078ff;
-}
-
-.navbar-b.navbar-reduce .navbar-brand {
-  color: #0078ff;
-}
-
-.navbar-b.navbar-reduce .navbar-toggler span {
-  background-color: #1B1B1B;
-}
-
-.navbar-b .navbar-brand {
-  color: rgb(123, 160, 207);
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
-.navbar-b .navbar-nav .dropdown-item.show .dropdown-menu,
-.navbar-b .dropdown.show .dropdown-menu,
-.navbar-b .dropdown-btn.show .dropdown-menu {
-  transform: translate3d(0px, 0px, 0px);
-  visibility: visible !important;
-}
-
-.navbar-b .dropdown-menu {
-  margin: 1.12rem 0 0;
-  border-radius: 0;
-}
-
-.navbar-b .dropdown-menu .dropdown-item {
-  padding: .7rem 1.7rem;
-  transition: all 500ms ease;
-}
-
-.navbar-b .dropdown-menu .dropdown-item:hover {
-  background-color: #0078ff;
-  color: black;
-  transition: all 500ms ease;
-}
-
-.navbar-b .dropdown-menu .dropdown-item.active {
-  background-color: #0078ff;
-} */
-
-
-
-
-
-
 
 
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
 #about {
   position: relative;
   width: 100%;
   height: auto;
   min-height: 110vh;
-  padding: 10rem 0;
+  padding: 10rem 0 0 0;
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("images/about.jpg"); */
   /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 30%, rgba(233, 233, 233, 0.5) 75%, #9c9c9c 100%), url("images/about.jpg"); */
   background: linear-gradient(to bottom, rgba(44, 61, 72, 0.65) 30%, rgba(23, 23, 23, 0.52) 75%, #0b0d11a3 80%), url('images/about.jpg');
@@ -655,7 +503,7 @@ nav#mainNav {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  margin: -10rem 0;
+  /* margin-top: -10rem; */
 }
 
 #about-text {
@@ -689,14 +537,14 @@ nav#mainNav {
   line-height:0.2em;
 }
 
-div.text-section {
-  padding-bottom: 2rem;
-}
-
 #skills i{
   background-color: black;
   font-size: 1.3em;
 }
+div.text-section {
+  padding-bottom: 2rem;
+}
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
