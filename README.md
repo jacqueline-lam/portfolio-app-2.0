@@ -106,6 +106,7 @@ Everyone interacting in the project’s codebases is expected to follow the [cod
 ## Attributions
 * Ellipsis/ Spinner loading gif is provided by loading.io
 * Homepage SCSS Animation by Lindsay Grizzard (source: freefrontend.com)
+* Navbar based on design by Pixelstretch (https://codepen.io/technext/pen/qBmNbJE)
 * Icons provided by https://icons8.com/
 -------------
 
