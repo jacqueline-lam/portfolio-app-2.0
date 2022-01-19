@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // import custom `useRouteMatch` from React Router
 import {
   Switch,
@@ -8,6 +8,7 @@ import {
 import ProjectFilters from '../components/projects/ProjectFilters';
 import ProjectList from '../components/projects/ProjectList';
 import ProjectDetails from '../components/projects/ProjectDetails';
+import Loading from '../images/loading.gif'
 
 function ProjectsContainer() {
   const [stacks, setStacks] = useState([]);
@@ -111,7 +112,7 @@ function ProjectsContainer() {
               <h1>PORTFOLIO</h1>
               {
                 loadingProjects ?
-                  <h2>Loading...</h2>
+                  <img src={Loading} alt='loading' />
                   :
                   <>
                     <h3>My Latest Projects</h3>

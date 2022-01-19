@@ -33,7 +33,7 @@ div.component {
 .text{
   display: inline-block;
   text-align: left;
-  margin: 0 5%;
+  margin: 5% 0%;
 }
 
 .text-section {
