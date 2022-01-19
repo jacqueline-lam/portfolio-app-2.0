@@ -4,7 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-// import NavBar from './components/NavBar';
+import 'bootswatch/dist/litera/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';

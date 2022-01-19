@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import 'bootswatch/dist/litera/bootstrap.min.css';
 // React-router to link to specific URLs then show/hide various components
 // Router = base for app's routing - declare how react router will be used
 // provider - React Context API - provides data to child components

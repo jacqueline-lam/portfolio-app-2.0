@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;
-  /* background-color: #EBEBF3; */
+  background-color: #EBEBF3;
   /* padding-top: 90px; */
 }
 
@@ -29,6 +29,16 @@ div.main-container {
   padding-top: 8.5rem;
 }
 
+.title img {
+  /* margin-right: 10px; */
+  display: block;
+  margin: auto;
+  height: 60px;
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+
 .text{
   display: inline-block;
   text-align: left;
@@ -42,6 +52,7 @@ div.main-container {
 .text-section#skills {
   padding-top: 5%;
 }
+
 #portfolio h1, #blog-container h1{
   background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #8fbdba 65%);
   display: inline;
@@ -76,7 +87,7 @@ form {
      font-size: smaller;
      /* text-align: right; */
   }
-  div.page-container {
+  div.main-container {
     padding-top: 15rem;
   }
 
