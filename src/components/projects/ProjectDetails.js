@@ -17,7 +17,7 @@ function ProjectDetails({ projects }) {
     const projectStacks = (
       <div className="badge-wrapper">
         {project.stacks.map(stack =>
-          <span key={stack.id} className="badge badge-pill badge-dark">{stack.name}</span>
+          <span key={stack.id} className="badge rounded-pill bg-dark">{stack.name}</span>
         )}
       </div>
     );
