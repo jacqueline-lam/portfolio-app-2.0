@@ -20,8 +20,7 @@ body {
   background-color: #EBEBF3;
 }
 
-div.component {
-  /* margin-top: 150px; */
+div.main-container {
   /* display:'inline-block';
   text-align: 'left'; */
   margin-left: auto;
@@ -77,7 +76,7 @@ form {
      font-size: smaller;
      /* text-align: right; */
   }
-  div.component {
+  div.page-container {
     padding-top: 15rem;
   }
 

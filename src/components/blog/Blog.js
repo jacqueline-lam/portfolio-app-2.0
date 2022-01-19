@@ -9,9 +9,9 @@ function Blog({ blogPosts }) {
   })
 
   return (
-    <div className='component'>
+    <>
       {blogPostList}
-    </div>
+    </>
   );
 }
 

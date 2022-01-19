@@ -33,7 +33,7 @@ function ProjectDetails({ projects }) {
           <button className='btn btn-outline-secondary'>&laquo; BACK</button>
         </Link>
 
-        <div className='component'>
+        <div id='project-details'>
           <h3>{project.name}</h3>
           <img
             className='project-thumbnail img-fluid'

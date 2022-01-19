@@ -99,7 +99,7 @@ function ProjectsContainer() {
   }
 
   return (
-    <div id='projects-container' className='component'>
+    <div id='projects-container' className='main-container'>
       <Switch>
         {/*  we can use current URL from the `match` object as part of the path,
           this will generate a url like "/projects/:projectId" */}
@@ -107,9 +107,11 @@ function ProjectsContainer() {
           <ProjectDetails projects={projects} />
         </Route>
         <Route path='/projects' render={() => (
-          <>
-            <div id='portfolio'>
+          <div id='portfolio'>
+            <div className='title'>
               <h1>PORTFOLIO</h1>
+            </div>
+            <>
               {
                 loadingProjects ?
                   <img src={Loading} alt='loading' />
@@ -124,8 +126,8 @@ function ProjectsContainer() {
                     <ProjectList projects={filteredProjects} />
                   </>
               }
-            </div>
-          </>
+            </>
+          </div>
         )} />
       </Switch>
 

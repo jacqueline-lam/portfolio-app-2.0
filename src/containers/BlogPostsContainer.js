@@ -25,8 +25,8 @@ function BlogPostsContainer() {
   ));
 
   return (
-    <div id='blog-container' className='component'>
-      <div className='title-with-icon'>
+    <div id='blog-container' className='main-container'>
+      <div className='title'>
         <img src={icon} alt='blog icon' />
         <h1>BLOG</h1>
       </div>
