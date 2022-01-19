@@ -9,16 +9,16 @@ function ProjectCard({ project }) {
   let img = images('./' + fileName)
 
   return (
-    <div id='project-list'>
+    <div className='project-card'>
       {/* render React Router LInks for each project */}
       <Link key={project.id} to={`/projects/${project.id}`}>
-        <h4>{project.name}</h4>
+        <h4 className="project-link">{project.name}</h4>
+        <img
+          className='project-thumbnail img-fluid'
+          alt='project thumbnail'
+          src={img.default}
+        />
       </Link>
-      <img
-        className='project-thumbnail img-fluid'
-        alt='project thumbnail'
-        src={img.default}
-      />
       <i>{projectStacks}</i>
       <hr />
     </div >
