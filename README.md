@@ -3,7 +3,7 @@
 ## Overview
 This is the personal portfolio version 2.0 that showcases Jacqueline Lam's projects, software engineering journey, blog posts and more.
 
-The app is composed of backend rails API and front-end React clients, which use asynchronous Javascript (with the help of redux-thunk middleware) to make HTTP requests to the API and render them to the user interface.
+The app is composed of backend rails API and front-end React clients, which use asynchronous Javascript to make HTTP requests to the API and render them to the user interface. In version 2.0, redux-thunk middleware and old React lifecycle methods have been replaced with React hooks.
 
 ![portfolio demo](./public/portfolio-quick-demo.gif)
 
@@ -14,14 +14,15 @@ The app is composed of backend rails API and front-end React clients, which use 
 
 ## Features
 1. User can navigate between home, about, portfolio and blog pages
-2. User can filter projects by stacks
-3. User can add comments to speciic projects
-4. User will have access to the real time blog posts that have been published on dev.to
-## Other Features (coming soon)
+2. Collapsible navbar
+3. User can filter projects by stacks
+4. ~~User can add comments to speciic projects~~ (temporarily disabled on deployed web app)
+5. User will have access to the real time blog posts that have been published on dev.to
+6. About page - technical skills are divided into languages, libraries/ frameworks, databases
+## Other Potential Feature Ideas
 1. Featured project available on homepage/ about page
-2. About page - technical skills to be divided into languages, libraries/ frameworks, databases
-3. Project page: project to be displayed as div cards - hover to see description; sort project by date, featured projects (default setting)
-4. Blog: sort by date
+2. Project page: project to be displayed as div cards - hover to see description; sort project by date, featured projects (default setting)
+3. Blog: sort by date
 
 
 ## Technologies Implemented
