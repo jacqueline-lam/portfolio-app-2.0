@@ -6,15 +6,6 @@ function FilterButton({ stack, selectedStackIds, onToggleFilter }) {
   const [selected, setSelected] = useState(initialState);
   const renderClasses = getButtonClassnames();
 
-  // useEffect(() => {
-  //   setSelected(selectedStackIds.includes(myStackId.toString()))
-  // }, []);
-
-  // useEffect(() => {
-  //   onToggleFilter(stack.id, selected)
-  // }, [selected]);
-
-
   function getButtonClassnames() {
     let renderClasses = "btn btn-outline-info btn-sm";
     if (selected) {
@@ -24,22 +15,15 @@ function FilterButton({ stack, selectedStackIds, onToggleFilter }) {
     return renderClasses;
   }
 
-  // const handleOnClick = useCallback(() => {
-  //   setSelected(pressed => !pressed)
-  // }, [setSelected]);
-
   function handleOnClick(event) {
-    let pressed = !selected;
+    let inactive = !selected;
     const stackClicked = event.target.id;
 
-    if (pressed) {
-      setSelected(true);
-    } else {
-      setSelected(false);
-    };
+    inactive ? setSelected(true) : setSelected(false)
     // Only invoke callback when filter is clicked
     onToggleFilter(stackClicked, pressed)
   };
+
 
   return (
     <button

@@ -8,12 +8,17 @@ import { Markup } from 'interweave';
 import CommentsContainer from '../../containers/CommentsContainer'
 
 function ProjectDetails({ projects }) {
-  // call useParams to access the `params` from the url:
+  // Call useParams to access the `params` from the url:
   // the dynamic portion of our /projects/:projectId path
   const params = useParams();
   const project = projects.find(proj => proj.id.toString() === params.projectId)
 
   const renderProject = () => {
+    const fileName = project.image_url
+    // special feature supported by webpack's compiler that allows you to get all matching modules starting from some base directory
+    const images = require.context('../../images', true)
+    let img = images('./' + fileName)
+
     const projectStacks = (
       <div className="badge-wrapper">
         {project.stacks.map(stack =>
@@ -21,12 +26,8 @@ function ProjectDetails({ projects }) {
         )}
       </div>
     );
-    const fileName = project.image_url
-    // special feature supported by webpack's compiler that allows you to get all matching modules starting from some base directory
-    const images = require.context('../../images', true)
-    let img = images('./' + fileName)
 
-    // return multiple JSX elements in an array
+    // Return multiple JSX elements in an array
     return [
       <Container>
         <Link to={'/projects'}>
