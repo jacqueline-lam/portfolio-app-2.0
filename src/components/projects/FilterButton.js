@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function FilterButton({ stack, selectedStackIds, onToggleFilter }) {
   const myStackId = stack.id;
   const initialState = selectedStackIds.includes(myStackId.toString())
-  const [selected, setSelected] = useState(initialState);
+  const [toggle, setToggle] = useState(initialState);
   const renderClasses = getButtonClassnames();
 
   function getButtonClassnames() {
     let renderClasses = "btn btn-outline-info btn-sm";
-    if (selected) {
+    if (toggle) {
       renderClasses = "btn btn-outline-info btn-sm active"
     }
 
@@ -16,12 +16,12 @@ function FilterButton({ stack, selectedStackIds, onToggleFilter }) {
   }
 
   function handleOnClick(event) {
-    let inactive = !selected;
-    const stackClicked = event.target.id;
+    let toggled = !toggle;
+    toggled ? setToggle(true) : setToggle(false)
 
-    inactive ? setSelected(true) : setSelected(false)
     // Only invoke callback when filter is clicked
-    onToggleFilter(stackClicked, pressed)
+    const stackClicked = event.target.id;
+    onToggleFilter(stackClicked, toggled);
   };
 
 
@@ -30,7 +30,7 @@ function FilterButton({ stack, selectedStackIds, onToggleFilter }) {
       id={stack.id}
       type="button"
       className={renderClasses}
-      aria-pressed={selected}
+      aria-pressed={toggle}
       value={stack}
       onClick={handleOnClick}>
       {stack.name}

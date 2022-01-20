@@ -45,38 +45,42 @@ function ProjectsContainer() {
   }, [])
 
   function handleFiltersChange(stackId, selected) {
-    let newStackIds;
-    let newProjectList = [];
 
-    if (selected) {
-      console.log('allProjects = ', projects)
-      console.log('newProjectList = ', newProjectList)
+    function addFilter() {
+      // UPDATE SELECTED STACKS
+      // Concatnenating new values when stack filter btn is pressed
+      let newStackIds = selectedStackIds.concat(stackId);
+      // Set store unique stackIds
+      newStackIds = [...new Set(newStackIds)];
+      setSelectedStackIds(newStackIds);
+
+      // UPDATE FILTERRED PROJECTS
       // Filter projects with the chosen stack
-      newProjectList = filteredProjects.filter(proj => {
+      const newProjectList = filteredProjects.filter(proj => {
         // Test whether at least one stack of the proj.stacks passes the test)
         const matchingStack = (projectStack) => projectStack.id.toString() === stackId;
         return proj.stacks.some(matchingStack)
       })
-
-      // Concatnenating new values when stack filter btn is pressed
-      newStackIds = selectedStackIds.concat(stackId);
-      // Set store unique stackIds
-      newStackIds = [...new Set(newStackIds)];
+      setFilteredProjects(newProjectList);
 
       // Check if projects are filtered
       console.log('stackId = ', typeof stackId, stackId)
       console.log('stackIds = ', typeof newStackIds, newStackIds)
       console.log('newProjectList afrer addition = ', typeof newProjectList, newProjectList)
+    }
 
-    } else {
+    function removeFilter() {
+      // UPDATE SELECTED STACKS
       // Copy selectedStackIds array to allow removal w/o mutation
-      newStackIds = [...selectedStackIds];
+      const newStackIds = [...selectedStackIds];
       // Find 1st idx where id can be found
       // Set that idx as the start in Array.splice() and set delete count to 1
       newStackIds.splice(newStackIds.indexOf(stackId), 1);
+      setSelectedStackIds(newStackIds);
 
+      // UPDATE FILTERED PROJECTS
       // If no stack selected, show all projects
-      newProjectList = projects
+      let newProjectList = projects
 
       // Only include projects that have the selected stacks
       if (newStackIds.length > 0) {
@@ -88,14 +92,14 @@ function ProjectsContainer() {
           return hasSelectedStack;
         })
       }
+      setFilteredProjects(newProjectList);
 
       console.log('stackId', typeof stackId, stackId)
       console.log('stackIds', typeof newStackIds, newStackIds)
       console.log('filteredProjects after removal', typeof newProjectList, newProjectList)
     }
 
-    setSelectedStackIds(newStackIds);
-    setFilteredProjects(newProjectList);
+    selected ? addFilter() : removeFilter();
   }
 
   return (
