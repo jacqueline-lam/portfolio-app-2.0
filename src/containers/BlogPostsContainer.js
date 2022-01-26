@@ -10,6 +10,8 @@ function BlogPostsContainer() {
   const [blogPosts, setBlogPosts] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
+  // useEffect to handle side effect:
+  // Fetch blog data from API when component loads
   useEffect(() => {
     fetch(BLOG_URL)
       .then(r => r.json())

@@ -24,6 +24,8 @@ function ProjectsContainer() {
       .then(r => r.json())
       .then(rJSON => {
         setLoadingProjects(false);
+        // When data is received, setState to store store data
+        // causing an update with the remote data stored in state
         setStacks(rJSON);
       })
   };
@@ -38,6 +40,7 @@ function ProjectsContainer() {
       })
   };
 
+  // Fetch data from API when component renders for the first time
   // Empty dependencies array in second arg, so only run fetch ONCE
   useEffect(() => {
     fetchStacks();
