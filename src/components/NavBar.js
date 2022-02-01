@@ -1,7 +1,13 @@
 // NavLink = superset of Link, adding styling attrs to rendered ele
+// Tell React Router to re-render our routes, display component matching new URL
+
 import { NavLink } from 'react-router-dom';
 
-const NavBarB = () => {
+const linkStyles = {
+  color: '#7ba0cf'
+}
+
+function NavBar() {
   return (
     <div id='nav'>
       <header className="header">
@@ -20,9 +26,7 @@ const NavBarB = () => {
               className='link link-theme link-arrow'
               to="/"
               exact
-              activeStyle={{
-                color: '#7ba0cf'
-              }}
+              activeStyle={linkStyles}
             >Home</NavLink>
           </li>
           <li>
@@ -31,9 +35,7 @@ const NavBarB = () => {
               className='link link-theme link-arrow'
               to="/about"
               exact
-              activeStyle={{
-                color: '#7ba0cf'
-              }}
+              activeStyle={linkStyles}
             >About</NavLink>
           </li>
           <li>
@@ -42,9 +44,7 @@ const NavBarB = () => {
               className='link link-theme link-arrow'
               to="/projects"
               exact
-              activeStyle={{
-                color: '#7ba0cf'
-              }}
+              activeStyle={linkStyles}
             >Portfolio</NavLink>
           </li>
           <li>
@@ -52,9 +52,7 @@ const NavBarB = () => {
               className='link link-theme link-arrow'
               to="/blog"
               exact
-              activeStyle={{
-                color: '#7ba0cf'
-              }}
+              activeStyle={linkStyles}
             >Blog</NavLink>
           </li>
         </ul>
@@ -63,7 +61,7 @@ const NavBarB = () => {
   )
 }
 
-export default NavBarB;
+export default NavBar;
 
 
 

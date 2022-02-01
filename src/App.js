@@ -17,12 +17,14 @@ function App() {
     <div className="App" id="app">
       <NavBar />
       <Contact />
+      {/* Switch only render first route that matches path */}
       <Switch>
         {/* only first child <Route> that matches the location gets rendered */}
         {/* When URL matches specified path, render component */}
         <Route path='/blog' component={BlogPostsContainer} />
         <Route path='/projects' component={ProjectsContainer} />
         <Route path='/about' component={About} />
+        {/* Home to only display when URL is exactly '/' */}
         <Route exact path='/' component={Home} />
       </Switch>
     </div>
