@@ -10,7 +10,7 @@ function ProjectCard({ project }) {
 
   return (
     <div className='project-card'>
-      {/* render React Router LInks for each project */}
+      {/* render React Router Links for each project */}
       <Link key={project.id} to={`/projects/${project.id}`}>
         <h4 className="project-link">{project.name}</h4>
         <img

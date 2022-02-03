@@ -17,9 +17,8 @@ function App() {
     <div className="App" id="app">
       <NavBar />
       <Contact />
-      {/* Switch only render first route that matches path */}
       <Switch>
-        {/* only first child <Route> that matches the location gets rendered */}
+        {/* Switch only renders first child <Route> that matches the location */}
         {/* When URL matches specified path, render component */}
         <Route path='/blog' component={BlogPostsContainer} />
         <Route path='/projects' component={ProjectsContainer} />

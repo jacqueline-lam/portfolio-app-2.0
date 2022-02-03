@@ -2,13 +2,14 @@ import React from "react";
 // Here we add `match` to the arguments so we can access the path info
 // in `routerProps` that is passed from ProjectCard.js
 import { useParams } from "react-router-dom";
+// Link changes the URL using JavaScript, without making a GET request & reloading HTMl doc
 import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import { Markup } from 'interweave';
 import CommentsContainer from '../../containers/CommentsContainer'
 
 function ProjectDetails({ projects }) {
-  // Call useParams to access the `params` from the url:
+  // Call useParams to access the `params` from the current url:
   // the dynamic portion of our /projects/:projectId path
   const params = useParams();
   const project = projects.find(proj => proj.id.toString() === params.projectId)

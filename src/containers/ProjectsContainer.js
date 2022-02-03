@@ -16,7 +16,8 @@ function ProjectsContainer() {
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [loadingProjects, setLoadingProjects] = useState(true);
-  // useRouteMatch returns a special obj w/ info about currently matched route
+  // useRouteMatch returns a special OBJECT w/ info about currently matched route
+  // allow us to nest a 2nd Route that extends the URL path of the 1st
   const match = useRouteMatch();
 
   const fetchStacks = () => {
