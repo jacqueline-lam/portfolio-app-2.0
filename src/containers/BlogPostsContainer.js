@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Loading from '../images/loading.gif'
 import icon from '../images/blog-icon.png';
-// import Blog from '../components/blog/Blog'
 import BlogPost from '../components/BlogPost';
 
 const BLOG_URL = 'https://dev.to/api/articles?username=jacquelinelam'

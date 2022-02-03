@@ -1,6 +1,5 @@
 // NavLink = superset of Link, adding styling attrs to rendered ele
 // Tell React Router to re-render our routes, display component matching new URL
-
 import { NavLink } from 'react-router-dom';
 
 const linkStyles = {
@@ -30,7 +29,6 @@ function NavBar() {
             >Home</NavLink>
           </li>
           <li>
-            {/* <a href="#two" className="link link-theme link-arrow">SERVICE</a> */}
             <NavLink
               className='link link-theme link-arrow'
               to="/about"
@@ -39,7 +37,6 @@ function NavBar() {
             >About</NavLink>
           </li>
           <li>
-            {/* <a href="#three" className="link link-theme link-arrow">ABOUT US</a> */}
             <NavLink
               className='link link-theme link-arrow'
               to="/projects"

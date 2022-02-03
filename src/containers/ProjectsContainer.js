@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import custom `useRouteMatch` from React Router
 import {
   Switch,
   Route,
@@ -67,10 +66,10 @@ function ProjectsContainer() {
       })
       setFilteredProjects(newProjectList);
 
-      // Check if projects are filtered
-      console.log('stackId = ', typeof stackId, stackId)
-      console.log('stackIds = ', typeof newStackIds, newStackIds)
-      console.log('newProjectList afrer addition = ', typeof newProjectList, newProjectList)
+      // Uncomment to check if projects are filtered properly
+      // console.log('stackId = ', typeof stackId, stackId)
+      // console.log('stackIds = ', typeof newStackIds, newStackIds)
+      // console.log('newProjectList afrer addition = ', typeof newProjectList, newProjectList)
     }
 
     function removeFilter() {
@@ -98,9 +97,10 @@ function ProjectsContainer() {
       }
       setFilteredProjects(newProjectList);
 
-      console.log('stackId', typeof stackId, stackId)
-      console.log('stackIds', typeof newStackIds, newStackIds)
-      console.log('filteredProjects after removal', typeof newProjectList, newProjectList)
+      // Uncomment to check if projects are filtered properly
+      // console.log('stackId', typeof stackId, stackId)
+      // console.log('stackIds', typeof newStackIds, newStackIds)
+      // console.log('filteredProjects after removal', typeof newProjectList, newProjectList)
     }
 
     selected ? addFilter() : removeFilter();
