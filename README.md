@@ -5,9 +5,10 @@ This is the personal portfolio version 2.0 that showcases Jacqueline Lam's proje
 
 The app is composed of backend rails API and front-end React clients, which use asynchronous Javascript to make HTTP requests to the API and render them to the user interface. In version 2.0, redux-thunk middleware and old React lifecycle methods have been replaced with React hooks.
 
-![portfolio demo](./public/portfolio-quick-demo.gif)
+![portfolio demo](./public/portfolio.gif)
 
 * Back End Repo: [Portfolio API](https://github.com/jacqueline-lam/portfolio-api)
+* [Front End (React-Redux/ Version 1.0) Repo](https://github.com/jacqueline-lam/portfolio-app)
 * [Video Demo](https://www.youtube.com/watch?v=cTw0wAnVo1c&t=16s)
 * [Blog Post pt.1](https://dev.to/jacquelinelam/building-my-personal-portfolio-with-react-redux-pt-1-522k)
 * [Blog Post pt.2](https://dev.to/jacquelinelam/building-my-personal-portfolio-with-react-redux-pt-2-3f7o)
@@ -15,7 +16,7 @@ The app is composed of backend rails API and front-end React clients, which use 
 ## Features
 1. User can navigate between home, about, portfolio and blog pages
 2. Collapsible navbar
-3. User can filter projects by stacks
+3. User can filter projects by tech stacks
 4. ~~User can add comments to speciic projects~~ (temporarily disabled on deployed web app)
 5. User will have access to the real time blog posts that have been published on dev.to
 6. About page - technical skills are divided into languages, libraries/ frameworks, databases
@@ -28,8 +29,8 @@ The app is composed of backend rails API and front-end React clients, which use 
 ## Technologies Implemented
 1. React.js
 2. React hooks to replace class components and lifecycle methods
-~~2. Redux to manage state~~
-~~3. Redux-thunk to make use of async actions to send data and receive data from the server~~
+~~ Redux to manage state~~
+~~ and Redux-thunk to make use of async actions to send data and receive data from the server~~
 4. react-router with proper RESTful routing
 5. Postgres for data persistence
 6. Rails API backend to persist data for the application
