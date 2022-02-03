@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/portfolio-app-2.0/static/css/main.548be741.chunk.css",
+    "main.js": "/portfolio-app-2.0/static/js/main.d570733c.chunk.js",
+    "main.js.map": "/portfolio-app-2.0/static/js/main.d570733c.chunk.js.map",
+    "runtime-main.js": "/portfolio-app-2.0/static/js/runtime-main.cae94f4f.js",
+    "runtime-main.js.map": "/portfolio-app-2.0/static/js/runtime-main.cae94f4f.js.map",
+    "static/css/2.52022ad8.chunk.css": "/portfolio-app-2.0/static/css/2.52022ad8.chunk.css",
+    "static/js/2.255f3f1a.chunk.js": "/portfolio-app-2.0/static/js/2.255f3f1a.chunk.js",
+    "static/js/2.255f3f1a.chunk.js.map": "/portfolio-app-2.0/static/js/2.255f3f1a.chunk.js.map",
+    "index.html": "/portfolio-app-2.0/index.html",
+    "static/css/2.52022ad8.chunk.css.map": "/portfolio-app-2.0/static/css/2.52022ad8.chunk.css.map",
+    "static/css/main.548be741.chunk.css.map": "/portfolio-app-2.0/static/css/main.548be741.chunk.css.map",
+    "static/js/2.255f3f1a.chunk.js.LICENSE.txt": "/portfolio-app-2.0/static/js/2.255f3f1a.chunk.js.LICENSE.txt",
+    "static/media/about.jpg": "/portfolio-app-2.0/static/media/about.a883c4e4.jpg",
+    "static/media/bolderer-sinatra-app_homepage.png": "/portfolio-app-2.0/static/media/bolderer-sinatra-app_homepage.906e25cb.png",
+    "static/media/cli_project_spread.jpg": "/portfolio-app-2.0/static/media/cli_project_spread.7c58f66a.jpg",
+    "static/media/loading.gif": "/portfolio-app-2.0/static/media/loading.6abd0cc9.gif",
+    "static/media/movie-nominations.png": "/portfolio-app-2.0/static/media/movie-nominations.92572a90.png",
+    "static/media/personal-website-v1.png": "/portfolio-app-2.0/static/media/personal-website-v1.244172ce.png",
+    "static/media/portfolio.gif": "/portfolio-app-2.0/static/media/portfolio.1c1d91fc.gif",
+    "static/media/rails-bolderer-app_all-jackies-sends.png": "/portfolio-app-2.0/static/media/rails-bolderer-app_all-jackies-sends.08382dbd.png",
+    "static/media/umami-pantry.gif": "/portfolio-app-2.0/static/media/umami-pantry.37201925.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cae94f4f.js",
+    "static/css/2.52022ad8.chunk.css",
+    "static/js/2.255f3f1a.chunk.js",
+    "static/css/main.548be741.chunk.css",
+    "static/js/main.d570733c.chunk.js"
+  ]
+}
