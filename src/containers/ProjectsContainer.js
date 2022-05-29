@@ -7,7 +7,10 @@ import {
 import ProjectFilters from '../components/projects/ProjectFilters';
 import ProjectList from '../components/projects/ProjectList';
 import ProjectDetails from '../components/projects/ProjectDetails';
-import Loading from '../images/loading.gif'
+import Loading from '../images/loading.gif';
+
+const STACKS_URL = 'https://jlam-portfolio-backend.herokuapp.com/api/v1/stacks';
+const PROJECTS_URL = 'https://jlam-portfolio-backend.herokuapp.com/api/v1/projects';
 
 function ProjectsContainer() {
   const [stacks, setStacks] = useState([]);
@@ -20,7 +23,7 @@ function ProjectsContainer() {
   const match = useRouteMatch();
 
   const fetchStacks = () => {
-    fetch('https://jlam-portfolio-backend.herokuapp.com/api/v1/stacks')
+    fetch(STACKS_URL)
       .then(r => r.json())
       .then(rJSON => {
         setLoadingProjects(false);
@@ -31,7 +34,7 @@ function ProjectsContainer() {
   };
 
   const fetchProjects = () => {
-    fetch("https://jlam-portfolio-backend.herokuapp.com/api/v1/projects")
+    fetch(PROJECTS_URL)
       .then(r => r.json())
       .then(rJSON => {
         setProjects(rJSON);
