@@ -5,6 +5,8 @@ This is the personal portfolio version 2.0 that showcases Jacqueline Lam's proje
 
 The app is composed of backend rails API and front-end React clients, which use asynchronous Javascript to make HTTP requests to the API and render them to the user interface. In version 2.0, redux-thunk middleware and old React lifecycle methods have been replaced with React hooks.
 
+To see version 1 with Redux implementation, please visit the linked [GitHub repository](https://github.com/jacqueline-lam/portfolio-app) or [live website](https://jacqueline-lam.github.io/portfolio-app/#/).
+
 ![portfolio demo](./public/portfolio.gif)
 
 * Back End Repo: [Portfolio API](https://github.com/jacqueline-lam/portfolio-api)
@@ -29,8 +31,7 @@ The app is composed of backend rails API and front-end React clients, which use 
 ## Technologies Implemented
 1. React.js
 2. React hooks to replace class components and lifecycle methods
-~~ Redux to manage state~~
-~~ and Redux-thunk to make use of async actions to send data and receive data from the server~~
+~~Redux to manage state and Redux-thunk to make use of async actions to send data and receive data from the server~~
 4. react-router with proper RESTful routing
 5. Postgres for data persistence
 6. Rails API backend to persist data for the application
